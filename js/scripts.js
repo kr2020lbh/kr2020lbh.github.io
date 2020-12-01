@@ -40,3 +40,16 @@
         target: "#sideNav",
     });
 })(jQuery); // End of use strict
+
+var stopVideo = function () {
+    var iframes = document.querySelectorAll('.youtubeVideo')
+    iframes.forEach((iframe)=>{
+        var iframeSrc = iframe.src
+		iframe.src = iframeSrc
+    })
+}
+
+$('.youtubeVideoCloseButton').click(function(){
+    stopVideo($)
+})
+
